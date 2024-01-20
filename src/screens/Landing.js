@@ -24,8 +24,9 @@ export default function Landing() {
   return (
     <SafeAreaView style={styles.display}>
       <StatusBar barStyle={"dark-content"} />
-      <Text style={styles.logoText}>Winning Odd Tips ⚽</Text>
+      <Text style={styles.logoText}>Winning Picks ⚽</Text>
       <ActivityIndicator size={30} color={"green"} />
+      <Text style={styles.miniText}>Stake responsibly, Earn cool cash...</Text>
     </SafeAreaView>
   );
 }
@@ -43,5 +44,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 10,
+  },
+  miniText: {
+    fontSize: 8,
+    color: "#fff",
   },
 });

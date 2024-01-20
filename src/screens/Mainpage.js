@@ -1,6 +1,17 @@
+import { useNavigation } from "@react-navigation/native";
 import { Pressable, StyleSheet, View, Text, SafeAreaView } from "react-native";
 
 export default function Mainpage() {
+  const navigation = useNavigation();
+
+  const goToTwoOdds = () => {
+    navigation.navigate("Two");
+  };
+
+  const goToTenOdds = () => {
+    navigation.navigate("Ten");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text
@@ -15,10 +26,10 @@ export default function Mainpage() {
         Today's Betcodes
       </Text>
       <View style={styles.display}>
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={goToTwoOdds}>
           <Text style={styles.buttonText}>Free 2 Odds</Text>
         </Pressable>
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={goToTenOdds}>
           <Text style={styles.buttonText}>Free 10+ Odds</Text>
         </Pressable>
         <Pressable style={styles.button}>
